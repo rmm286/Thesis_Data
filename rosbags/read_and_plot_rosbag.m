@@ -18,11 +18,11 @@ function [out_mean, out_max] = read_and_plot_rosbag(file_path, plotpts)
         path_x(i) = pp{1,1}.Points(i).X;
         path_y(i) = pp{1,1}.Points(i).Y;
     end
-    path_points =[path_x, path_y];
-    if plotpts == 1
-        plot(path_x,path_y, '.');
-        legend('Filtered Position','Path Points');
-    end
+%     path_points =[path_x, path_y];
+%     if plotpts == 1
+%         plot(path_x,path_y, '.');
+%         legend('Filtered Position','Path Points');
+%     end
     [~,dist] = dsearchn(path_points,odom_array);
     hold off; 
 
