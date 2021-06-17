@@ -1,5 +1,5 @@
 myDir = uigetdir; %gets directory
-myFiles = dir(fullfile(myDir,'longturn_0_8*.bag')); %gets all wav files in struct
+myFiles = dir(fullfile(myDir,'*.bag')); %gets all wav files in struct
 plotpoints = 1;
 for k = 1:length(myFiles)
   if k == 1
